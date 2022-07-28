@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'popins',sans-serif;
+}
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background-color: black;
+}
+.wrapper{
+    text-align:center;
+    padding:20px 40px;
+    box-shadow: 0 0 20px 0px rgb(209, 88, 88);
+
+    cursor: pointer;
+    border: #ff00e0;
+    border-style: initial;
+    background: linear-gradient(135deg,#14ffe9,#ffeb3b,#ff00e0);
+   
+   }
+   .wrapper .display{
+    
+    text-align: center;
+    padding:20px 40px;
+    
+   }
+   .wrapper .display #time{
+    background: linear-gradient(135deg,#14ffe9,#ffeb3b,#ff00e0);
+    
+ 
+   }
