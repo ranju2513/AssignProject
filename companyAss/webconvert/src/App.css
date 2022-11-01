@@ -1,0 +1,287 @@
+/*Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+h1,h2{
+  font-weight: bold;
+  text-align: center;
+  font-size: 50px;
+}
+/*global variable*/
+:root{
+  --main:#f01027;
+  --black:#000;
+  --white:#fff;
+  --font_family:"Josefin Sans" ,sans-serif;
+}
+*{
+  transition: 0.3s;
+  font-family: var(--font_family);
+}
+::selection{
+  background-color:var(--main);
+  color: var(--white) !important ;
+
+}
+html::-webkit-scrollbar{
+  width: 10px;
+}
+html::-webkit-scrollbar-thumb{
+  background-color: var(--main);
+}
+html::-webkit-scrollbar-track{
+  background-color:var(--black) ;
+}
+.btn{
+  width: 300px;
+  border: 2px solid var(--main);
+  color: var(--main) !important ;
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+}
+.btn:hover{
+  color: var(--white) !important ;
+}
+.btn::after{
+  content: attr(--);
+  background-color: var(--main);
+  display:block;
+  position:absolute;
+  height: 100%;
+  z-index: -1;
+  width:0px ;
+  top: 0;
+  border-radius: 15px;
+  left: 0;
+  transition: 0.3s;
+}
+.btn:hover::after{
+  width: 100%;
+}
+/*navbar*/
+.navbar{
+  display: flex;
+  justify-content:space-between ;
+  padding: 20px;
+  border-bottom: 2px solid var(--white);
+}
+.navbar.active{
+  background:var(--black);
+}
+.navbar-brand{
+  font-size: 3rem;
+  color: var(--white) !important;
+  padding: 8px 60px;
+}
+.navbar-brand span{
+  font-size: 1.6em;
+  color: var(--main) !important ; 
+  font-weight: 600 ;
+}
+.navbar nav{
+  padding:0px 60px ;
+  margin-top: 40px;
+}
+.nav-link{
+  color: var(--white) !important ;
+  margin-left: 8px;
+}
+.nav-link:hover{
+  color: var(--main) !important ;
+}
+.nav-link::after{
+  content:attr(--) ;
+  background-color: var(--main);
+  height: 2px;
+  width: 0px;
+  display: block;
+  position: absolute;
+
+}
+.nav-link:hover::after{
+  width: 40px;
+}
+
+/*Header part start*/
+.header{
+  position: relative;
+}
+.header img{
+  height: 90vh;
+  width: 100%;
+  object-fit: cover;
+}
+.header .Overlay{
+  position:absolute;
+  top: 0;
+  left:0 ;
+  height: 100%;
+  width: 100%;
+  background-color: var(--black);
+  opacity: 0.4;
+}
+.header .Content{
+  position: absolute;
+  top: 99%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  color: var(--white) !important ; 
+  background-color: var(--black);
+  padding:20px ;
+}
+.header .Content h6{
+  font-size: 50px;
+}
+.header .btn{
+  margin-top: 30px;
+}
+
+/*custum section*/
+.custom{
+  margin: 200px auto;
+}
+.custom .box{
+  overflow: hidden;
+}
+.custom img{
+  height: 300px;
+  width: 300px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  cursor: pointer;
+  overflow: hidden;
+}
+.custom img:hover{
+  -o-transform: scale(1.01);
+  transform:scale(1.01);
+}
+/*custam section ended*/
+/*Details section start*/
+.details{
+  margin-bottom: 200px;
+}
+.details .col-sm-5 h6{
+  font-size: 70px;
+  font-weight: 600px;
+  margin: 20px auto;
+}
+.details .col-sm-5 p{
+  margin: 33px auto;
+}
+.teams{
+  margin-bottom: 200px;
+}
+.teams .col-sm-4{
+  overflow: hidden;
+  position: relative;
+}
+.teams img{
+  height: 400px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  cursor: pointer;
+  overflow: hidden;
+}
+.teams img:hover{
+  -o-transform:scale(1.01);
+  transform: scale(1.01);
+}
+ .teams .content{
+  position:absolute;
+  top: 90%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  color: var(--white) !important ;
+  width: 100%;
+  background: var(--black);
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+}
+.teams .col-sm-4:hover .content{
+opacity: 1;
+}
+.teams .content h6{
+  font-size: 40px;
+  font-weight: 600;
+}
+
+/* pricing section*/
+.pricing{
+  margin-bottom: 200px;
+}
+.pricing .box{
+  box-shadow: 10px 10px 10px 10px
+  rgba(0,0 ,0,0.4),inset 10px 10px
+  10px 10px  rgba(0, 0,0, 0.4) ;
+  padding: 20px;
+  text-align: center;
+  
+}
+.pricing .box:hover, .pricing .box.active{
+background: var(--black);
+color: var(--white) !important;
+}
+.pricing .row{
+  margin: 100px auto;
+}
+.pricing .mid{
+  margin-top: 100px;
+}
+.pricing .box h6{
+  font-size: 40px;
+  margin: 10px auto;
+  font-weight: 600;
+}
+.pricing .box h5{
+  font-size: 100px;
+  margin: 20px auto;
+  font-weight: 600;
+}
+.pricing .box p{
+  font-size: 13px;
+  margin: 15px auto;
+}
+/*pricing section end*/
+
+/*footer section start*/
+footer{
+ background: var(--black);
+ padding: 20px;
+ 
+}
+footer .container{
+  color: var(--white) !important ;
+}
+
+footer .container h6{
+  font-weight: 600;
+  font-size: 40px;
+  margin: 20px auto;
+}
+footer .container i{
+  display: block;
+  margin: 10px auto;
+
+}
+footer .container i a{
+  color:var(--white) !important;
+  text-decoration: none !important;
+  padding-left: 20px;
+}
+footer .container i a:hover{
+color: var(--main) !important ;
+padding-left: 25px;
+font-weight: 500;
+}
+footer .customFooter{
+  text-align: center;
+  padding: 20px;
+}
+footer .customFooter a{
+ color: var(--white);
+ text-decoration: nonec !important;
+ font-size: 20px;
+}
+/*footer is end*/
